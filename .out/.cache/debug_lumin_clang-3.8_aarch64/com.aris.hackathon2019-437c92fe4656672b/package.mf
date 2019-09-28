@@ -1,0 +1,297 @@
+{
+ "entries": [
+  {
+   "compression": 8,
+   "hash": "228f7f22210436bb7b3ca09c0c0436b276d242e2",
+   "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
+   "size": 3160096,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
+  },
+  {
+   "compression": 8,
+   "hash": "6068dfa9195f3ba57bfbe21428ca0d1abbd57a81",
+   "pkgpath": "bin/libil2cpp.so",
+   "size": 48027488,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Native/libil2cpp.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "3561e4cfc363982c0b153e2cc4f3f7470fabdcd4",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\libil2cpp.so-1cdfb355b41c422b",
+   "xfrm_size": 48028246
+  },
+  {
+   "compression": 8,
+   "hash": "fa2b8ff146caf64688e7aa835af0034ca81b5505",
+   "pkgpath": "bin/AudioPluginMSASpatializer.so",
+   "size": 282448,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/AudioPluginMSASpatializer.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "fdb04b7e5fd10737c6d4f7a18118a1c6026c180d",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\AudioPluginMSASpatializer.so-376911f84f26bc57",
+   "xfrm_size": 283206
+  },
+  {
+   "compression": 8,
+   "hash": "f577ca4311f747d3c3def9af66848ed34363d044",
+   "pkgpath": "bin/LuminMediaPlayer.dll",
+   "size": 68608,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/LuminMediaPlayer.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "271ef4a915e6921bc4313af8869402e38ca9bb01",
+   "pkgpath": "bin/LuminUnity.dll",
+   "size": 329216,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/LuminUnity.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "b8ce049d2e85f27cc7346d7551d1853b20e78461",
+   "pkgpath": "bin/MSA.Runtime.dll",
+   "size": 22016,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/MSA.Runtime.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "a71acc50817a0929bccc93cbe7619d57d25d1b17",
+   "pkgpath": "bin/UnityMagicLeap.so",
+   "size": 3077192,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/UnityMagicLeap.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "e8a4b9f8de1ee5ac65b49dd37834426bd1d5a3ef",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\UnityMagicLeap.so-376911f84f26bc57",
+   "xfrm_size": 3077950
+  },
+  {
+   "compression": 8,
+   "hash": "fbfa4a6aa20b14e0f60550676e5d34bebb99d46d",
+   "pkgpath": "bin/libml_camera_plugin.so",
+   "size": 14184,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/libml_camera_plugin.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "40f69c3ff45cc715c455ff474bc0f08d379615bc",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\libml_camera_plugin.so-376911f84f26bc57",
+   "xfrm_size": 14942
+  },
+  {
+   "compression": 8,
+   "hash": "88ac1047e0ac5686d703471c3115f719ca66a4e8",
+   "pkgpath": "bin/libml_mediaplayer_plugin.so",
+   "size": 67624,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/libml_mediaplayer_plugin.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "e03d399c4fd7d0697351cfbff876f284e8796722",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\libml_mediaplayer_plugin.so-376911f84f26bc57",
+   "xfrm_size": 68382
+  },
+  {
+   "compression": 8,
+   "hash": "984e4d2049ed5491b970ba15d1e8c8cadac0896e",
+   "pkgpath": "bin/nunit.framework.dll",
+   "size": 339968,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Plugins/nunit.framework.dll"
+  },
+  {
+   "compression": 8,
+   "hash": "e6124da6073b916e29e013cf3ae3f58a4c5fdb0e",
+   "pkgpath": "Data/Resources/mscorlib.dll-resources.dat",
+   "size": 337563,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Resources/mscorlib.dll-resources.dat"
+  },
+  {
+   "compression": 8,
+   "hash": "fa10859a933989c5961257c02d9f4fcf042044f1",
+   "pkgpath": "Data/Resources/unity default resources",
+   "size": 3689324,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Resources/unity default resources"
+  },
+  {
+   "compression": 8,
+   "hash": "88bb7afbcf63275d0962b4c7c7cede30a1b0d014",
+   "pkgpath": "Data/Resources/unity_builtin_extra",
+   "size": 770468,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/Resources/unity_builtin_extra"
+  },
+  {
+   "compression": 8,
+   "hash": "778891100a8030ad6096db64784c6e5d67c28378",
+   "pkgpath": "Data/UnitySubsystems/UnityMagicLeap/UnitySubsystemsManifest.json",
+   "size": 417,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/UnitySubsystems/UnityMagicLeap/UnitySubsystemsManifest.json"
+  },
+  {
+   "compression": 8,
+   "hash": "f226dfc0f1097b18c77eb2198b6257be5b02a613",
+   "pkgpath": "Data/boot.config",
+   "size": 123,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/boot.config"
+  },
+  {
+   "compression": 8,
+   "hash": "7e2ce649d69376d3726f550f782791511a18b24e",
+   "pkgpath": "Data/globalgamemanagers",
+   "size": 60144,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/globalgamemanagers"
+  },
+  {
+   "compression": 8,
+   "hash": "2d185736273ea88eb36f306bb22911e237e74d42",
+   "pkgpath": "Data/globalgamemanagers.assets",
+   "size": 84292,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/globalgamemanagers.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "8108a604e9e09215ae7ed82ca6372a12d866371b",
+   "pkgpath": "Data/level0",
+   "size": 17044,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/level0"
+  },
+  {
+   "compression": 8,
+   "hash": "8f4b605b4e675ae10ac23974f16cb78d804ef55a",
+   "pkgpath": "Data/resources.assets",
+   "size": 47624,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/resources.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "1d5e5447a0f0b085b695376c9fdb7738e07e4f23",
+   "pkgpath": "Data/resources.assets.resS",
+   "size": 360480,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/resources.assets.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "6cdc0e4cbe1201c4ca6f1a16e833814ac2bbc3a8",
+   "pkgpath": "Data/resources.resource",
+   "size": 5875136,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/resources.resource"
+  },
+  {
+   "compression": 8,
+   "hash": "fffd4296a02ae8fa166fbcd47e333fe0b7c85a06",
+   "pkgpath": "Data/sharedassets0.assets",
+   "size": 3273368,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/sharedassets0.assets"
+  },
+  {
+   "compression": 8,
+   "hash": "304462cbb155392d52d3d5b9ff6d3240f40ec92a",
+   "pkgpath": "Data/sharedassets0.assets.resS",
+   "size": 20000,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Data/sharedassets0.assets.resS"
+  },
+  {
+   "compression": 8,
+   "hash": "61d3d50aa3472ee134e4c14f0f43bcbdc0215e33",
+   "pkgpath": "bin/Player.elf",
+   "size": 20710840,
+   "src": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/Temp/StagingArea/Player.elf",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "474894a51b1d03d4130b0b1ddb4dec0701f0551a",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\Player.elf-de89b06858159f4d",
+   "xfrm_size": 20711598
+  },
+  {
+   "compression": 8,
+   "hash": "5925de9f4d7b83c65d1fd7b25ced5f0bf8c27e73",
+   "pkgpath": "bin/libc++_shared.so",
+   "size": 976832,
+   "src": "C:/Users/Tim/MagicLeap/mlsdk/v0.22.0/lumin/stl/libc++/lib/libc++_shared.so",
+   "xfrm_flags": {
+    "signed": {
+     "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+    },
+    "taildata": {
+     "debuggable": true,
+     "sbox": "USER",
+     "version": 3
+    }
+   },
+   "xfrm_hash": "481e73f437aa679beca1d1c1ba6c48ff6122ae4d",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\libc++_shared.so-bc1ddb3673ee44ad",
+   "xfrm_size": 977590
+  },
+  {
+   "compression": 8,
+   "hash": "9efac7f6d8845f468ae83a7ad64e77bec8c5e6fe",
+   "pkgpath": "manifest.xml",
+   "size": 640,
+   "src": "C:\\Users\\Tim\\Desktop\\Unity-Project-Template-2019.2.2f1\\Hackathon2019\\Temp\\StagingArea\\manifest.xml",
+   "xfrm_flags": {
+    "manifest": {
+     "cert_hash": "c7cf8d5a81bb490d850fb2bdfd12346e6c46932f",
+     "developer_id": "78b40506-f04f-42d3-9aed-0d759456ac88"
+    }
+   },
+   "xfrm_hash": "45d5d61bc5e95713c1945f9c3cfa5cac50d726ed",
+   "xfrm_path": "C:/Users/Tim/Desktop/Unity-Project-Template-2019.2.2f1/Hackathon2019/.out/.cache/debug_lumin_clang-3.8_aarch64/com.aris.hackathon2019-437c92fe4656672b\\manifest.xml-de89b06858159f4d",
+   "xfrm_size": 652
+  }
+ ],
+ "pkgflags": {
+  "signed": {
+   "cert": "C:\\Users\\Tim\\Downloads\\aris.cert"
+  },
+  "taildata": {
+   "debuggable": true,
+   "devcert": "C:\\Users\\Tim\\Downloads\\aris.cert",
+   "sbox": "USER",
+   "version": 3
+  }
+ }
+}

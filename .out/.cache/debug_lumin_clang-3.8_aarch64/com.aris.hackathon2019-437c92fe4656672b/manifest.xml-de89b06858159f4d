@@ -1,0 +1,10 @@
+<manifest xmlns:ml="magicleap" ml:developer_id="78b40506-f04f-42d3-9aed-0d759456ac88" ml:package="com.aris.hackathon2019" ml:version_code="1" ml:version_name="">
+  <application ml:min_api_level="4" ml:sdk_version="1.0" ml:visible_name="Hackathon2019">
+    <component ml:binary_name="bin/Player.elf" ml:name=".fullscreen" ml:type="Fullscreen" ml:visible_name="Hackathon2019">
+      <icon ml:model_folder="Icon/Model" ml:portal_folder="Icon/Portal" />
+    </component>
+    <uses-privilege ml:name="LowLatencyLightwear" />
+    <uses-privilege ml:name="ControllerPose" />
+    <uses-privilege ml:name="CameraCapture" />
+  </application>
+</manifest>
