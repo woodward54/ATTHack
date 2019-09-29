@@ -39,7 +39,7 @@ namespace MagicLeap
         private GameObject _trackingCube = null;
 
         [SerializeField]
-        public GameObject _markerManager;
+        public GameObject _markerManager = null;
 
 
         private ImageTrackingExample.ViewMode _lastViewMode = ImageTrackingExample.ViewMode.All;
