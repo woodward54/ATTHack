@@ -28,7 +28,7 @@ namespace MagicLeap
         private MLImageTrackerBehavior _trackerBehavior = null;
         private bool _targetFound = false;
 
-        [SerializeField, Tooltip("Text to update on ImageTracking changes.")]
+        //[SerializeField, Tooltip("Text to update on ImageTracking changes.")]
         private Text _statusLabel = null;
         // Stores initial text
         private string _prefix;
@@ -37,6 +37,9 @@ namespace MagicLeap
 
         [SerializeField, Tooltip("Game Object showing the tracking cube")]
         private GameObject _trackingCube = null;
+
+        [SerializeField]
+        public GameObject _markerManager;
 
 
         private ImageTrackingExample.ViewMode _lastViewMode = ImageTrackingExample.ViewMode.All;
@@ -135,9 +138,14 @@ namespace MagicLeap
         /// <param name="isReliable"> Contains if image found is reliable </param>
         private void OnTargetFound(bool isReliable)
         {
-            _eventString = String.Format("Target Found ({0})", (isReliable ? "Reliable" : "Unreliable"));
-            _targetFound = true;
-            RefreshViewMode();
+            if (!_targetFound)
+            {
+                _eventString = String.Format("Target Found ({0})", (isReliable ? "Reliable" : "Unreliable"));
+                Debug.Log("INFO: Tracker found.");
+                _targetFound = true;
+                _markerManager.SetActive(true);
+                RefreshViewMode();
+            }
         }
 
         /// <summary>
@@ -147,7 +155,7 @@ namespace MagicLeap
         {
             _eventString = "Target Lost";
             _targetFound = false;
-            RefreshViewMode();
+            //RefreshViewMode();
         }
         #endregion
     }
