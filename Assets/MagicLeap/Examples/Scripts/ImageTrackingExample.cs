@@ -33,20 +33,20 @@ namespace MagicLeap
             DemoOnly,
         }
 
-        public GameObject[] TrackerBehaviours;
+        public GameObject TrackerBehaviours;
         #endregion
 
         #region Private Variables
         private ViewMode _viewMode = ViewMode.All;
 
         [SerializeField, Tooltip("Image Tracking Visualizers to control")]
-        private ImageTrackingVisualizer [] _visualizers = null;
+        private ImageTrackingVisualizer _visualizers = null;
 
-        [SerializeField, Tooltip("The View Mode text.")]
-        private Text _viewModeLabel = null;
+        //[SerializeField, Tooltip("The View Mode text.")]
+        //private Text _viewModeLabel = null;
 
-        [SerializeField, Tooltip("The Tracker Status text.")]
-        private Text _trackerStatusLabel = null;
+        //[SerializeField, Tooltip("The Tracker Status text.")]
+        //private Text _trackerStatusLabel = null;
 
         [Space, SerializeField, Tooltip("ControllerConnectionHandler reference.")]
         private ControllerConnectionHandler _controllerConnectionHandler = null;
@@ -115,10 +115,10 @@ namespace MagicLeap
         /// </summary>
         void UpdateVisualizers()
         {
-            foreach (ImageTrackingVisualizer visualizer in _visualizers)
-            {
-                visualizer.UpdateViewMode(_viewMode);
-            }
+            //foreach (ImageTrackingVisualizer visualizer in _visualizers)
+            //{
+                _visualizers.UpdateViewMode(_viewMode);
+            //}
         }
 
         /// <summary>
@@ -127,10 +127,10 @@ namespace MagicLeap
         /// </summary>
         void UpdateImageTrackerBehaviours(bool enabled)
         {
-            foreach (GameObject obj in TrackerBehaviours)
-            {
-                obj.SetActive(enabled);
-            }   
+            //foreach (GameObject obj in TrackerBehaviours)
+            //{
+                TrackerBehaviours.SetActive(enabled);
+            //}   
         }
 
         /// <summary>
@@ -142,13 +142,13 @@ namespace MagicLeap
             {
                 UpdateImageTrackerBehaviours(true);
 
-                if (_visualizers.Length < 1)
+                if (_visualizers == null)
                 {
                     Debug.LogError("Error: ImageTrackingExample._visualizers is not set, disabling script.");
                     enabled = false;
                     return;
                 }
-                if (_viewModeLabel == null)
+                /*if (_viewModeLabel == null)
                 {
                     Debug.LogError("Error: ImageTrackingExample._viewModeLabel is not set, disabling script.");
                     enabled = false;
@@ -159,7 +159,7 @@ namespace MagicLeap
                     Debug.LogError("Error: ImageTrackingExample._trackerStatusLabel is not set, disabling script.");
                     enabled = false;
                     return;
-                }
+                }*/
 
                 MLInput.OnControllerButtonDown += HandleOnButtonDown;
                 MLInput.OnTriggerDown += HandleOnTriggerDown;
@@ -199,7 +199,7 @@ namespace MagicLeap
         /// <param name="triggerValue">The value of the trigger.</param>
         private void HandleOnTriggerDown(byte controllerId, float triggerValue)
         {
-            if (_hasStarted && MLImageTracker.IsStarted && _controllerConnectionHandler.IsControllerValid(controllerId))
+           /* if (_hasStarted && MLImageTracker.IsStarted && _controllerConnectionHandler.IsControllerValid(controllerId))
             {
                 if (MLImageTracker.GetTrackerStatus())
                 {
@@ -211,7 +211,7 @@ namespace MagicLeap
                     MLImageTracker.Enable();
                     _trackerStatusLabel.text = "Tracker Status: Enabled";
                 }
-            }
+            }*/
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace MagicLeap
             if (_controllerConnectionHandler.IsControllerValid(controllerId) && button == MLInputControllerButton.Bumper)
             {
                 _viewMode = (ViewMode)((int)(_viewMode + 1) % Enum.GetNames(typeof(ViewMode)).Length);
-                _viewModeLabel.text = string.Format("View Mode: {0}", _viewMode.ToString());
+                //_viewModeLabel.text = string.Format("View Mode: {0}", _viewMode.ToString());
             }
             UpdateVisualizers();
         }

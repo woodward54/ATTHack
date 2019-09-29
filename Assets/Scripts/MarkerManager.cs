@@ -11,14 +11,13 @@ public class MarkerManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
     }
 
     void Start()
     {
-        Debug.Log("INFO: Marker 1 Spawned.");
+        //Debug.Log("INFO: Marker Manager started");
         marker1.SetActive(true);
-        marker2.SetActive(false);
+        marker2.SetActive(true);
     }
 
     int Next()

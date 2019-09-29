@@ -29,10 +29,10 @@ namespace MagicLeap
         private bool _targetFound = false;
 
         //[SerializeField, Tooltip("Text to update on ImageTracking changes.")]
-        private Text _statusLabel = null;
+        //private Text _statusLabel = null;
         // Stores initial text
-        private string _prefix;
-        private string _eventString;
+        //private string _prefix;
+        //private string _eventString;
 
 
         [SerializeField, Tooltip("Game Object showing the tracking cube")]
@@ -51,18 +51,19 @@ namespace MagicLeap
         /// </summary>
         void Awake()
         {
+            Debug.Log("Image Start");
             if (null == _trackingCube)
             {
                 Debug.LogError("Error: ImageTrackingVisualizer._trackingCube is not set, disabling script.");
                 enabled = false;
                 return;
             }
-            if (null == _statusLabel)
+            /*if (null == _statusLabel)
             {
                 Debug.LogError("Error: ImageTrackingVisualizer._statusLabel is not set, disabling script.");
                 enabled = false;
                 return;
-            }
+            }*/
         }
 
         /// <summary>
@@ -70,9 +71,10 @@ namespace MagicLeap
         /// </summary>
         void Start()
         {
-            _prefix = _statusLabel.text;
-            _statusLabel.text = _prefix + "Target Lost";
-            _eventString = "";
+            
+            //_prefix = _statusLabel.text;
+            //_statusLabel.text = _prefix + "Target Lost";
+            //_eventString = "";
             _trackerBehavior = GetComponent<MLImageTrackerBehavior>();
             _trackerBehavior.OnTargetFound += OnTargetFound;
             _trackerBehavior.OnTargetLost += OnTargetLost;
@@ -82,7 +84,7 @@ namespace MagicLeap
 
         private void Update()
         {
-            _statusLabel.text = String.Format("{0}[{1}/{2}] {3}", _prefix, _trackerBehavior.IsTracking, _trackerBehavior.TrackingStatus, _eventString);
+            //_statusLabel.text = String.Format("{0}[{1}/{2}] {3}", _prefix, _trackerBehavior.IsTracking, _trackerBehavior.TrackingStatus, _eventString);
         }
 
         /// <summary>
@@ -138,14 +140,11 @@ namespace MagicLeap
         /// <param name="isReliable"> Contains if image found is reliable </param>
         private void OnTargetFound(bool isReliable)
         {
-            if (!_targetFound)
-            {
-                _eventString = String.Format("Target Found ({0})", (isReliable ? "Reliable" : "Unreliable"));
-                Debug.Log("INFO: Tracker found.");
-                _targetFound = true;
-                _markerManager.SetActive(true);
-                RefreshViewMode();
-            }
+            //_eventString = String.Format("Target Found ({0})", (isReliable ? "Reliable" : "Unreliable"));
+            Debug.Log("INFO: Tracker found.");
+            _targetFound = true;
+            _markerManager.SetActive(true);
+            RefreshViewMode();
         }
 
         /// <summary>
@@ -153,9 +152,10 @@ namespace MagicLeap
         /// </summary>
         private void OnTargetLost()
         {
-            _eventString = "Target Lost";
+            //_eventString = "Target Lost";
             _targetFound = false;
-            //RefreshViewMode();
+            Debug.Log("ERROR: Tracking lost.");
+           // RefreshViewMode();
         }
         #endregion
     }
