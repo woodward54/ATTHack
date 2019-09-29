@@ -10,6 +10,12 @@ public class MarkerManager : MonoBehaviour
         
     }
 
+    void Awake()
+    {
+        Debug.Log("INFO: Marker 1 Spawned.");
+        // set marker coords relative to tracking cube
+    }
+
     // Update is called once per frame
     void Update()
     {

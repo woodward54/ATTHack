@@ -53,8 +53,6 @@ namespace MagicLeap
 
         private PrivilegeRequester _privilegeRequester = null;
 
-        private bool ImageFound = false;
-
         private bool _hasStarted = false;
         #endregion
 
