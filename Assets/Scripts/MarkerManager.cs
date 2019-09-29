@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MarkerManager : MonoBehaviour
 {
-    private int currentStep = 0;
+    public int currentStep = 0;
 
     public GameObject[] markers;
 
@@ -16,13 +16,16 @@ public class MarkerManager : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log("INFO: Marker Manager started");
+
+        Debug.Log("INFO: Marker Manager started");
         foreach (GameObject obj in markers)
         {
             obj.SetActive(false);
         }
 
         markers[0].SetActive(true);
+
+        currentStep = 0;
     }
 
     public int Next()

@@ -199,19 +199,22 @@ namespace MagicLeap
         /// <param name="triggerValue">The value of the trigger.</param>
         private void HandleOnTriggerDown(byte controllerId, float triggerValue)
         {
-           /* if (_hasStarted && MLImageTracker.IsStarted && _controllerConnectionHandler.IsControllerValid(controllerId))
-            {
-                if (MLImageTracker.GetTrackerStatus())
-                {
-                    MLImageTracker.Disable();
-                    _trackerStatusLabel.text = "Tracker Status: Disabled";
-                }
-                else
-                {
-                    MLImageTracker.Enable();
-                    _trackerStatusLabel.text = "Tracker Status: Enabled";
-                }
-            }*/
+            /* if (_hasStarted && MLImageTracker.IsStarted && _controllerConnectionHandler.IsControllerValid(controllerId))
+             {
+                 if (MLImageTracker.GetTrackerStatus())
+                 {
+                     MLImageTracker.Disable();
+                     _trackerStatusLabel.text = "Tracker Status: Disabled";
+                 }
+                 else
+                 {
+                     MLImageTracker.Enable();
+                     _trackerStatusLabel.text = "Tracker Status: Enabled";
+                 }
+             }*/
+
+            // reset image target
+            _visualizers.UpdateTarget();
         }
 
         /// <summary>
@@ -227,6 +230,9 @@ namespace MagicLeap
                 //_viewModeLabel.text = string.Format("View Mode: {0}", _viewMode.ToString());
             }
             UpdateVisualizers();
+
+            // reset image target
+            _visualizers.ResetTarget();
         }
         #endregion
     }

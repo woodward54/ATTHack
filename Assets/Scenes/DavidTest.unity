@@ -341,9 +341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452dbfd91faff164aaf9a49c1891b92f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStep: 1
-  marker1: {fileID: 266853191}
-  marker2: {fileID: 1322526654}
+  currentStep: 0
+  markers:
+  - {fileID: 266853191}
+  - {fileID: 1322526654}
 --- !u!4 &410311150
 Transform:
   m_ObjectHideFlags: 0
@@ -2329,6 +2330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _trackingCube: {fileID: 1310136938}
   _markerManager: {fileID: 410311148}
+  _markerManagerScript: {fileID: 410311149}
 --- !u!114 &1856998794
 MonoBehaviour:
   m_ObjectHideFlags: 0

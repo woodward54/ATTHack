@@ -41,6 +41,8 @@ namespace MagicLeap
         [SerializeField]
         public GameObject _markerManager = null;
 
+        [SerializeField]
+        private MarkerManager _markerManagerScript = null;
 
         private ImageTrackingExample.ViewMode _lastViewMode = ImageTrackingExample.ViewMode.All;
         #endregion
@@ -145,6 +147,10 @@ namespace MagicLeap
             _targetFound = true;
             _markerManager.SetActive(true);
             RefreshViewMode();
+
+            // turn off auto updates
+            _trackerBehavior.AutoUpdate = false;
+
         }
 
         /// <summary>
@@ -155,7 +161,30 @@ namespace MagicLeap
             //_eventString = "Target Lost";
             _targetFound = false;
             Debug.Log("ERROR: Tracking lost.");
-           // RefreshViewMode();
+
+            //trackerBehavior.AutoUpdate = true;
+            //RefreshViewMode();
+        }
+
+        public void UpdateTarget()
+        {
+            _trackerBehavior.AutoUpdate = true;
+            RefreshViewMode();
+        }
+
+        public void ResetTarget()
+        {
+            Debug.Log("INFO: System Reset.");
+            _targetFound = false;
+            _trackerBehavior.AutoUpdate = true;
+            RefreshViewMode();
+            _markerManager.SetActive(false);
+
+            // set marker status to 1
+            _markerManagerScript.currentStep = 0;
+
+            // set steps to 0 (tims code)
+
         }
         #endregion
     }
