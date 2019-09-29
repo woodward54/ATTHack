@@ -9,17 +9,16 @@ public class MarkerManager : MonoBehaviour
     public GameObject marker2;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
     }
 
-    void Awake()
+    void Start()
     {
         Debug.Log("INFO: Marker 1 Spawned.");
         marker1.SetActive(true);
         marker2.SetActive(false);
-        // set marker coords relative to tracking cube
     }
 
     int Next()
