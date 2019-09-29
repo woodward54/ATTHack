@@ -1815,7 +1815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1021008874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2314,7 +2314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1625865171
 Transform:
   m_ObjectHideFlags: 0
@@ -2726,6 +2726,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: marke1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4eec95a0573339a4bb78898207937b21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4eec95a0573339a4bb78898207937b21,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3068,6 +3073,16 @@ PrefabInstance:
         type: 3}
       propertyPath: far clip plane
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 20294507499185110, guid: 24158fb1437dc8e418d893939758764d,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20294507499185110, guid: 24158fb1437dc8e418d893939758764d,
+        type: 3}
+      propertyPath: field of view
+      value: 26.991467
       objectReference: {fileID: 0}
     - target: {fileID: 8599575387109836598, guid: 24158fb1437dc8e418d893939758764d,
         type: 3}

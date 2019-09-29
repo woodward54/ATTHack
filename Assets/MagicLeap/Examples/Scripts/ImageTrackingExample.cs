@@ -140,7 +140,7 @@ namespace MagicLeap
         {
             if (!_hasStarted)
             {
-                UpdateImageTrackerBehaviours(true);
+                UpdateImageTrackerBehaviours(true); 
 
                 if (_visualizers == null)
                 {

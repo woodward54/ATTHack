@@ -15,6 +15,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.MagicLeap;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace MagicLeap
 {
@@ -159,6 +160,8 @@ namespace MagicLeap
                 // turn off auto updates
                 _trackerBehavior.AutoUpdate = false;
                 FindNewTarget = false;
+                _trackerBehavior.enabled = false;
+                _trackerBehavior.CancelInvoke();
             }
         }
 
@@ -177,9 +180,11 @@ namespace MagicLeap
 
         public void UpdateTarget()
         {
-            _trackerBehavior.AutoUpdate = true;
-            FindNewTarget = true;
-            //_trackerBehavior.AutoUpdate = false; 
+          //  _trackerBehavior.AutoUpdate = true;
+           // StartCoroutine(Waiter());
+
+            //FindNewTarget = true;
+            _trackerBehavior.AutoUpdate = false; 
             //_markerManager.SetActive(false);
             //RefreshViewMode();
         }
@@ -201,6 +206,7 @@ namespace MagicLeap
             // set steps to 0 (tims code)*/
 
         }
+
         #endregion
     }
 }
