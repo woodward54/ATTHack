@@ -14,6 +14,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.MagicLeap;
+using UnityEngine.SceneManagement;
 
 namespace MagicLeap
 {
@@ -27,6 +28,7 @@ namespace MagicLeap
         #region Private Variables
         private MLImageTrackerBehavior _trackerBehavior = null;
         private bool _targetFound = false;
+        private bool FindNewTarget = true;
 
         //[SerializeField, Tooltip("Text to update on ImageTracking changes.")]
         //private Text _statusLabel = null;
@@ -42,7 +44,7 @@ namespace MagicLeap
         public GameObject _markerManager = null;
 
         [SerializeField]
-        private MarkerManager _markerManagerScript = null;
+        private GameObject _hid = null;
 
         private ImageTrackingExample.ViewMode _lastViewMode = ImageTrackingExample.ViewMode.All;
         #endregion
@@ -73,10 +75,11 @@ namespace MagicLeap
         /// </summary>
         void Start()
         {
-            
+
             //_prefix = _statusLabel.text;
             //_statusLabel.text = _prefix + "Target Lost";
             //_eventString = "";
+            Debug.Log("START: ImageTrackingVisualizer");
             _trackerBehavior = GetComponent<MLImageTrackerBehavior>();
             _trackerBehavior.OnTargetFound += OnTargetFound;
             _trackerBehavior.OnTargetLost += OnTargetLost;
@@ -94,6 +97,7 @@ namespace MagicLeap
         /// </summary>
         void OnDestroy()
         {
+            Debug.Log("DEST: ImageTrackingVis");
             _trackerBehavior.OnTargetFound -= OnTargetFound;
             _trackerBehavior.OnTargetLost -= OnTargetLost;
         }
@@ -143,14 +147,19 @@ namespace MagicLeap
         private void OnTargetFound(bool isReliable)
         {
             //_eventString = String.Format("Target Found ({0})", (isReliable ? "Reliable" : "Unreliable"));
-            Debug.Log("INFO: Tracker found.");
-            _targetFound = true;
-            _markerManager.SetActive(true);
-            RefreshViewMode();
+            if (FindNewTarget)
+            {
+                Debug.Log("INFO: Tracker found.");
 
-            // turn off auto updates
-            _trackerBehavior.AutoUpdate = false;
+                _targetFound = true;
+                _markerManager.SetActive(true);
+                _hid.SetActive(true);
+                RefreshViewMode();
 
+                // turn off auto updates
+                _trackerBehavior.AutoUpdate = false;
+                FindNewTarget = false;
+            }
         }
 
         /// <summary>
@@ -169,21 +178,27 @@ namespace MagicLeap
         public void UpdateTarget()
         {
             _trackerBehavior.AutoUpdate = true;
-            RefreshViewMode();
+            FindNewTarget = true;
+            //_trackerBehavior.AutoUpdate = false; 
+            //_markerManager.SetActive(false);
+            //RefreshViewMode();
         }
 
         public void ResetTarget()
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            /*
             Debug.Log("INFO: System Reset.");
             _targetFound = false;
-            _trackerBehavior.AutoUpdate = true;
+            //_trackerBehavior.AutoUpdate = true;
             RefreshViewMode();
             _markerManager.SetActive(false);
+            FindNewTarget = true;
 
             // set marker status to 1
             _markerManagerScript.currentStep = 0;
 
-            // set steps to 0 (tims code)
+            // set steps to 0 (tims code)*/
 
         }
         #endregion

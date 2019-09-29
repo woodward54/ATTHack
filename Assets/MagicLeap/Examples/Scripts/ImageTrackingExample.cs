@@ -214,6 +214,7 @@ namespace MagicLeap
              }*/
 
             // reset image target
+            Debug.Log("CONT: Trigger down");
             _visualizers.UpdateTarget();
         }
 
@@ -232,6 +233,7 @@ namespace MagicLeap
             UpdateVisualizers();
 
             // reset image target
+            Debug.Log("CONT: Button down");
             _visualizers.ResetTarget();
         }
         #endregion
