@@ -37,6 +37,9 @@ public class HeadTracking : MonoBehaviour
     public GameObject MissionObj;
     public MissionPanel Mission;
 
+    public GameObject target;
+    public MarkerManager marker;
+
     public GameObject Right;
     public GameObject Left;
 
@@ -45,6 +48,7 @@ public class HeadTracking : MonoBehaviour
     void Start()
     {
         Mission = MissionObj.GetComponent<MissionPanel>();
+        marker = target.GetComponent<MarkerManager>();
         source = GetComponent<AudioSource>();
     }
 
@@ -97,6 +101,7 @@ public class HeadTracking : MonoBehaviour
                         pause = .5f; //setting our delay
                         dial.fillAmount = 0; //reset the dial amount
                         elapsed = 0;
+                        //marker.Next();
                     }
                 }
 
@@ -125,6 +130,7 @@ public class HeadTracking : MonoBehaviour
                         pause = .5f; //setting our delay
                         dial.fillAmount = 0; //reset the dial amount
                         elapsed = 0;
+                        //marker.Back();
                     }
                 }
 
