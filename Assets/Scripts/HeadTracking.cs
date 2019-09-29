@@ -70,10 +70,9 @@ public class HeadTracking : MonoBehaviour
                 if(Cursor.active == false)
                 {
                     Cursor.SetActive(true);
-                    elapsed = 0;
-                    dial.fillAmount = 0; //reset the dial amount
                 }
-                
+                elapsed = 0;
+                dial.fillAmount = 0; //reset the dial amount
                
             }
 
@@ -90,7 +89,7 @@ public class HeadTracking : MonoBehaviour
                     if (dial.fillAmount != 1f) //if we have not clicked Start animation
                     {
                         Debug.Log("Dial Fill");
-                        dial.fillAmount = dial.fillAmount + Time.deltaTime * speed;
+                        dial.fillAmount = dial.fillAmount + Time.deltaTime * timerSpeed;
                     }
                     else //we have clicked 
                     {
@@ -101,7 +100,7 @@ public class HeadTracking : MonoBehaviour
                         pause = .5f; //setting our delay
                         dial.fillAmount = 0; //reset the dial amount
                         elapsed = 0;
-                        //marker.Next();
+                        marker.Next();
                     }
                 }
 
@@ -119,7 +118,7 @@ public class HeadTracking : MonoBehaviour
                     
                     if (dial.fillAmount != 1f) //if we have not clicked Start animation
                     {
-                        dial.fillAmount = dial.fillAmount + Time.deltaTime * speed;
+                        dial.fillAmount = dial.fillAmount + Time.deltaTime * timerSpeed;
                     }
                     else //we have clicked 
                     {
@@ -130,7 +129,7 @@ public class HeadTracking : MonoBehaviour
                         pause = .5f; //setting our delay
                         dial.fillAmount = 0; //reset the dial amount
                         elapsed = 0;
-                        //marker.Back();
+                        marker.Back();
                     }
                 }
 

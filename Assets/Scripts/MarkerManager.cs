@@ -30,22 +30,22 @@ public class MarkerManager : MonoBehaviour
 
     public int Next()
     {
-        if (currentStep == markers.Length)
+        Debug.Log("VAL 1: " + currentStep + " VAL 2: " + markers.Length);
+
+        if (currentStep == (markers.Length))
         {
             return 1;
         } else
+        
+        for(int i = 0; i < markers.Length; i++)
         {
-            Debug.Log("INFO: Next - pos: " + currentStep+1);
-            for (int i=markers.Length; i>0; --i)
-            {
-                if (markers[i].activeInHierarchy)
-                {
-                    markers[i + 1].SetActive(true);
-                }
-                markers[i].SetActive(false);
-            }
-            currentStep += 1;
+           markers[i].SetActive(false);
         }
+        if(markers[currentStep+1] != null)
+        {
+           markers[currentStep + 1].SetActive(true);
+        }
+        currentStep++;
         return 0;
     }
 
@@ -54,16 +54,17 @@ public class MarkerManager : MonoBehaviour
         if (currentStep == 0)
         {
             return 1;
-        } else
+        }
+        else
         {
             Debug.Log("INFO: Back - pos: " + currentStep+1);
             for (int i=0; i<markers.Length; ++i)
             {
-                if (markers[i].activeInHierarchy)
-                {
-                    markers[i - 1].SetActive(true);
-                }
                 markers[i].SetActive(false);
+            }
+            if(markers[currentStep-1] != null)
+            {
+                markers[currentStep - 1].SetActive(true);
             }
             currentStep -= 1;
         }
