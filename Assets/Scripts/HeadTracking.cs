@@ -57,19 +57,35 @@ public class HeadTracking : MonoBehaviour
 
         if (Physics.Raycast(Cam.transform.position, Cam.transform.forward, out hit))
         {
-            if (hit.collider.name == "PannelR" )
+            Debug.Log(hit.collider.name);
+
+            if(hit.collider.name == "PannelC")
+            {
+                Cursor.transform.position = Vector3.Slerp(Cursor.transform.position, hit.point, speed); //Updates the position of the cursor to show object collided with 
+                Cursor.transform.rotation = Quaternion.Slerp(Cursor.transform.rotation, Cam.transform.rotation, speed);
+                if(Cursor.active == false)
+                {
+                    Cursor.SetActive(true);
+                    elapsed = 0;
+                    dial.fillAmount = 0; //reset the dial amount
+                }
+                
+               
+            }
+
+            else if (hit.collider.name == "Pannel1R" )
             {
                 Cursor.transform.position = Vector3.Slerp(Cursor.transform.position, hit.point, speed); //Updates the position of the cursor to show object collided with 
                 Cursor.transform.rotation = Quaternion.Slerp(Cursor.transform.rotation, Cam.transform.rotation, speed);
                 Cursor.SetActive(true);
+                
                 //Right.GetComponent<MeshRenderer>().material.Lerp( Hover,Idle, lerp);
                 missCount = 0; //reset the miss count becuase we have hit the object 
                 if (elapsed > pause)
                 {
-                    
                     if (dial.fillAmount != 1f) //if we have not clicked Start animation
                     {
-                        
+                        Debug.Log("Dial Fill");
                         dial.fillAmount = dial.fillAmount + Time.deltaTime * speed;
                     }
                     else //we have clicked 
@@ -85,10 +101,8 @@ public class HeadTracking : MonoBehaviour
                 }
 
                 elapsed += Time.deltaTime; //checking number of seconds elapsed
-
-           
             }
-            else if (hit.collider.name == "PannelL")
+            else if (hit.collider.name == "Pannel1L")
             {
                 Cursor.transform.position = Vector3.Slerp(Cursor.transform.position, hit.point, speed); //Updates the position of the cursor to show object collided with 
                 Cursor.transform.rotation = Quaternion.Slerp(Cursor.transform.rotation, Cam.transform.rotation, speed);

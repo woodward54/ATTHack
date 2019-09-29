@@ -78,7 +78,7 @@ public class MissionPanel : MonoBehaviour {
                 Task1.fontStyle = FontStyles.Bold;
                 Task2.color = Color.white;
                 Task3.color = Color.white;
-                taskNum++;
+                taskNum--;
            }
            else if(taskNum == 2)
            {
@@ -87,7 +87,7 @@ public class MissionPanel : MonoBehaviour {
                 Task2.color = Color.green;
                 Task2.fontStyle = FontStyles.Bold;
                 Task3.color = Color.white;
-                taskNum++;
+                taskNum--;
            }
             else if(taskNum == 3)
             {
@@ -97,7 +97,7 @@ public class MissionPanel : MonoBehaviour {
                 Task2.fontStyle = FontStyles.Strikethrough;
                 Task3.color = Color.green;
                 Task3.fontStyle = FontStyles.Bold;
-                taskNum++;
+                taskNum--;
             }
        }       
     }
